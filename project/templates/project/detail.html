@@ -1,0 +1,15 @@
+{% extends 'index.html' %}
+
+{% block project %}
+Details
+<br>
+<h2>{{ project.id }}</h2>
+<img src="{{ project.icon.url }}" />
+<img src="{{ project.image.url }}" />
+{{ project.pub_date_pretty }}<br>
+{{ project.summary }}<br>
+{{ project.votes_total }}<br>
+{{ project.hunter.username }}<br>
+
+
+{% endblock %}

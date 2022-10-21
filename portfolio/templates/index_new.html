@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <!-- css file -->
+    <link rel="stylesheet" href="{% static './css/style.css' %}" />
+    <!-- fonts -->
+    <link rel="stylesheet" href="https://use.typekit.net/prr6kom.css">
+    <!-- box icons -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <!-- aos -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <title>Portfolio</title>
+</head>
+
+<body>
+    <label>
+        <input type="checkbox">
+        <span class="menu"> <span class="hamburger"></span> </span>
+        <ul>
+            <li> <a href="#">About</a> </li>
+            <li> <a href="#">Projects</a> </li>
+            <li> <a href="#">Contact</a> </li>
+            <li> <a href="#">blog</a> </li>
+            <li><a href="accounts/login">login</a></li>
+            <li><a href="admin/">admin</a></li>
+
+        </ul>
+    </label>
+    <div class="container">
+        <div id="login">
+            {% block inlog %}
+            {% endblock %}
+        </div>
+    </div>
+
+
+
+    <div class="container">
+
+        <section>
+            <div class="home">
+
+                <p>Hello, I'm <span>Cas Meijer</span>. <br>
+                    I'm a student webdeveloper</p>
+                <button>view my work <i class='bx bx-right-arrow-alt'></i></button>
+            </div>
+        </section>
+        <section id="about">
+
+            <div class="txt">
+                <h1>who am I</h1>
+                <p>hello am Cas Meijer am a student webdeveloper</p>
+                <p>im in my second year of my study</p>
+            </div>
+            <img src="{% static 'programingview.jpg' %}">
+        </section>
+        {% block project %}
+        {% endblock %}
+
+    </div>
+
+</body>
+
+</html>

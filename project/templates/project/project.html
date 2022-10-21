@@ -1,0 +1,18 @@
+{% extends 'index.html' %}
+{% block project %}
+
+<section class="projects">
+    <h2>project</h2>
+    <div class="cards" data-aos="fade-up">
+        {% for project in project.all %}
+        <div class="content">
+            <img src="{{ project.image.url }}" />
+            <h6>{{ project.body }}</h6>
+            <a href="{{ project.url }}">view project</a>
+            <a href="#">link to github</a>
+        </div>
+        {% endfor %}
+
+    </div>
+</section>
+{% endblock %}

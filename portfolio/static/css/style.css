@@ -1,0 +1,122 @@
+@import "dropdown.css";
+:root {
+  --clr-darkblue: rgb(37, 41, 52);
+  --clr-darkblue-darker: rgb(27, 36, 47);
+  --clr-purple: #df00fe;
+  --clr-white: white;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+* {
+  font-family: raleway, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+html {
+  font-size: 18px;
+}
+
+body {
+  color: var(--clr-white);
+  font-size: 1.2em;
+  line-height: 1.6;
+  background: var(--clr-darkblue);
+  overflow-x: hidden;
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+}
+.container {
+  height: 300vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100vw;
+}
+.home {
+  width: max-content;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.home p {
+  font-size: 2.2rem;
+}
+
+.home p span {
+  color: var(--clr-purple);
+}
+.home button i {
+  font-size: 24px;
+  transition: 0.4s;
+}
+.home button:hover {
+  background-color: var(--clr-purple);
+  color: var(--clr-white);
+  font-family: raleway, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  border: 0px;
+}
+.home button i:hover {
+  transform: rotate(90deg);
+}
+button {
+  color: white;
+  width: 15rem;
+  height: 3rem;
+  font-size: 1.5rem;
+  border: 3px solid var(--clr-white);
+  background-color: var(--clr-darkblue);
+  transition: 0.4s;
+}
+.about {
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--clr-white);
+  color: var(--clr-darkblue);
+  display: flex;
+  flex-direction: column;
+}
+.about img {
+  width: 50%;
+  height: auto;
+}
+/* projects cards */
+.projects {
+  color: white;
+  background-color: var(--clr-darkblue);
+  margin: 0;
+  width: 100vw;
+}
+.projects h2 {
+  text-align: center;
+}
+.cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  /* flex-grow: 1; */
+}
+.content {
+  width: 400px;
+  height: 500px;
+  background-color: var(--clr-white);
+  border-radius: 5rem 5rem 2rem 2rem;
+}
+.projects img {
+  width: 400px;
+  border-radius: 3rem 3rem 0 0;
+}
+.projects h6 {
+  color: black;
+}
