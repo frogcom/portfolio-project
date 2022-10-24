@@ -14,6 +14,8 @@
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <!-- aos -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- favicon -->
+    <link rel="shortcut icon" type="image/png" href="{% static 'img/favicon.ico' %}" />
     <title>Portfolio</title>
 </head>
 
@@ -35,16 +37,17 @@
 
 
     <div class="container">
-        <div id="login">
+        <!-- <div id="login">
             {% block inlog %}
             {% endblock %}
-        </div>
+        </div> -->
         <section>
             <div class="home">
-
-                <p>Hello, I'm <span>Cas Meijer</span>. <br>
-                    I'm a student webdeveloper</p>
-                <button>view my work <i class='bx bx-right-arrow-alt'></i></button>
+                <div class="content">
+                    <p>Hello, I'm <span>Cas Meijer</span>. <br>
+                        I'm a student webdeveloper</p>
+                    <button>view my work <i class='bx bx-right-arrow-alt'></i></button>
+                </div>
             </div>
         </section>
         <div class="about">
