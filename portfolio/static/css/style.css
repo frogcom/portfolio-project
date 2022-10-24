@@ -48,7 +48,7 @@ body {
   align-items: center;
   justify-content: center;
 }
-.home .content {
+.home .contentHome {
   width: max-content;
   height: max-content;
   background-color: rgba(37, 41, 52, 0.7);
