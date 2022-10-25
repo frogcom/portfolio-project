@@ -38,7 +38,7 @@ body {
   width: 100vw;
 }
 .home {
-  background-image: url("/static/img/programingview.jpg");
+  background-image: url("{% static 'programingview.jpg'%}");
   background-repeat: no-repeat;
   background-size: cover;
   width: 100vw;
