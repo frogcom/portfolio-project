@@ -38,8 +38,7 @@ body {
   width: 100vw;
 }
 .home {
-  background-image: url("https://via.placeholder.com/150");
-  background-repeat: no-repeat;
+  background: url("/static/img/programingview.jpg") no-repeat center;
   background-size: cover;
   width: 100vw;
   height: 100vh;
