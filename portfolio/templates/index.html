@@ -41,25 +41,26 @@
             {% block inlog %}
             {% endblock %}
         </div> -->
-        <section>
-            <div class="home">
-                <div class="contentHome">
-                    <p>Hello, I'm <span>Cas Meijer</span>. <br>
-                        I'm a student webdeveloper</p>
-                    <button>view my work <i class='bx bx-right-arrow-alt'></i></button>
-                </div>
+        <section class="home">
+            <div class="contentHome">
+                <p>Hello, I'm <span>Cas Meijer</span>. <br>
+                    I'm a student webdeveloper</p>
+                <button>view my work <i class='bx bx-right-arrow-alt'></i></button>
             </div>
         </section>
-        <div class="about">
+        <section class="about">
             <div class="txt">
                 <h2>who am I</h2>
                 <p>hello am Cas Meijer am a student webdeveloper</p>
                 <p>im in my second year of my study</p>
             </div>
             <img src="{% static 'programingview.jpg' %}">
-            {% block project %}
-            {% endblock %}
-        </div>
+
+        </section>
+        {% block project %}
+        {% endblock %}
+
+
     </div>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
