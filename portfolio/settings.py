@@ -26,13 +26,12 @@ SECRET_KEY = 'django-insecure-6@2*$ean3gkr-=reg_gohagdvr5*fbd$(t#j2737*jg-q(@4qi
 DEBUG = True
 
 ALLOWED_HOSTS = ['127.0.0.1', 'localhost','192.168.2.11', '77.269.166.120', 'casmeijer.nl']
-
-
 # Application definition
 
 INSTALLED_APPS = [
     'accounts.apps.AccountsConfig', # Toevoegen
-    'project.apps.ProjectConfig',
+    'project.apps.ProjectConfig',# projects
+    'socials.apps.SocialsConfig',# socials
     'django.contrib.admin', 
     'django.contrib.auth', # autorisatie van gebruikers (standaard)
     'django.contrib.contenttypes',

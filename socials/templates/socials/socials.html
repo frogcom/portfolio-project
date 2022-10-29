@@ -1,0 +1,10 @@
+{% extends 'index.html' %}
+{% block socials %}
+<h1>socials</h1>
+{% for socials in socials.all %}
+<a href="{{socials.link_to}}">
+    <img src="{{ socials.image.url }}" /></a>
+<h6>{{ socials.social_media }}</h6>
+{% endfor %}
+
+{% endblock %}

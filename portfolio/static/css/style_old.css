@@ -1,0 +1,161 @@
+@import "dropdown.css";
+:root {
+  --clr-darkblue: rgb(37, 41, 52);
+  --clr-darkblue-darker: rgb(27, 36, 47);
+  --clr-purple: #df00fe;
+  --clr-white: white;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+* {
+  font-family: raleway, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+html {
+  font-size: 18px;
+}
+
+body {
+  color: var(--clr-white);
+  font-size: 1.2em;
+  line-height: 1.6;
+  overflow-x: hidden;
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100vw;
+}
+.home {
+  background: url("/static/img/programingview.jpg") no-repeat center;
+  background-size: cover;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.home .contentHome {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: max-content;
+  height: max-content;
+  padding: 2rem 3rem;
+  border-radius: 2rem;
+  text-shadow: 2px 2px 4px #ffffff;
+}
+.home p {
+  font-size: 2.2rem;
+}
+
+.home p span {
+  color: var(--clr-purple);
+  text-shadow: 2px 2px 4px var(--clr-purple);
+}
+.home button {
+  margin: 0 auto;
+}
+.home button i {
+  font-size: 24px;
+  transition: 0.4s;
+}
+.home button:hover {
+  color: var(--clr-white);
+  background-position: center;
+  font-family: raleway, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  border: 0px;
+}
+.home button i:hover {
+  transform: rotate(90deg);
+}
+button {
+  color: white;
+  width: 15rem;
+  height: 3rem;
+  font-size: 1.5rem;
+  border: 3px solid var(--clr-white);
+  background-color: var(--clr-darkblue);
+  transition: 0.4s;
+}
+.about {
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--clr-white);
+  color: var(--clr-darkblue);
+  display: flex;
+  flex-direction: column;
+}
+.about img {
+  width: 50%;
+  height: auto;
+}
+
+/* projects cards */
+.projects {
+  color: white;
+  background-color: var(--clr-darkblue);
+  margin: 0;
+  width: 100vw;
+}
+.projects h2 {
+  text-align: center;
+}
+.cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  z-index: 0;
+  /* flex-grow: 1; */
+}
+.cards .content {
+  width: 400px;
+  height: max-content;
+  background-color: var(--clr-white);
+  border-radius: 5rem 5rem 2rem 2rem;
+  padding-bottom: 2rem;
+}
+.projects img {
+  width: 400px;
+  border-radius: 3rem 3rem 0 0;
+}
+.projects h3 {
+  color: black;
+  text-align: center;
+  margin: 0.1rem;
+}
+.projects p {
+  color: black;
+  font-size: 1rem;
+  margin: 5px;
+}
+.links {
+  display: flex;
+  justify-content: space-around;
+}
+.links a {
+  text-decoration: none;
+}
+a .button {
+  padding: 0.5rem 1rem;
+  background-color: var(--clr-purple);
+  color: var(--clr-white);
+}
+.github .button {
+  background-color: #6e5494;
+}
