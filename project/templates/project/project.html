@@ -6,16 +6,16 @@
 <div class="cards" data-aos="fade-up">
     {% for project in project.all %}
     <div class="content">
-        <img src="{{ project.image.url }}" />
+        <img src="{{ project.image.url }}" loading="lazy" />
         <h3>{{project.title}}</h3>
-        <p>{{ project.body }}</p>
+        <p>{{ project.txt_short }}</p>
         <div class="links">
-            <a href="{{ project.url }}">
+            <a href="https://{{ project.live_url }}" target="_blank">
                 <div class="button">
                     view project
                 </div>
             </a>
-            <a href="#" class="github">
+            <a href="{{ project.github_url }}" target="_blank" class="github">
                 <div class="button">
                     link to github
                 </div>

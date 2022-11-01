@@ -59,6 +59,7 @@ button {
 }
 .about {
   background-color: var(--clr-white);
+  width: 100vw;
 }
 .titles {
   text-align: center;
@@ -66,8 +67,15 @@ button {
   font-size: 2em;
   padding-top: 0.5em;
   border-bottom: 0.1em solid white;
+  padding: 0.2em;
+  width: max-content;
+  margin: 0 auto;
+  margin-bottom: 1em;
 }
-
+.titleblue {
+  color: var(--clr-darkblue);
+  border-bottom: 0.1em solid var(--clr-darkblue);
+}
 .about .descriptionabout {
   display: flex;
   flex-direction: column;
@@ -100,4 +108,64 @@ button {
   .computeranimation img {
     width: 750px;
   }
+}
+
+/* projects cards */
+.projects {
+  color: white;
+  background-color: var(--clr-darkblue);
+  margin: 0;
+  width: 100vw;
+}
+
+.cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  z-index: 0;
+  /* flex-grow: 1; */
+}
+.cards .content {
+  width: 400px;
+  height: max-content;
+  background-color: var(--clr-white);
+  border-radius: 5em 5em 2em 2em;
+  padding-bottom: 2em;
+}
+.projects img {
+  width: 400px;
+  border-radius: 3em 3em 0 0;
+  box-shadow: -12px -9px 93px -16px rgba(0, 0, 0, 0.75) inset;
+  -webkit-box-shadow: -12px -9px 93px -16px rgba(0, 0, 0, 0.75) inset;
+  -moz-box-shadow: -12px -9px 93px -16px rgba(0, 0, 0, 0.75) inset;
+}
+.projects h3 {
+  color: black;
+  text-align: center;
+  font-family: raleway, sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+.projects p {
+  color: black;
+  font-size: 1em;
+  margin: 5px;
+  padding: 1.5em;
+  padding-top: 0.5em;
+}
+.links {
+  display: flex;
+  justify-content: space-around;
+}
+.links a {
+  text-decoration: none;
+}
+a .button {
+  padding: 0.5em 1em;
+  background-color: var(--clr-purple);
+  color: var(--clr-white);
+}
+.github .button {
+  background-color: #6e5494;
 }
