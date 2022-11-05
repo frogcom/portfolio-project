@@ -1,0 +1,152 @@
+@mixin darkMode {
+  background-color: $primary;
+  .menu {
+    background: $primary-darker;
+    box-shadow: 0 0 0 0 $primary-darker, 0 0 0 0 $primary-darker;
+  }
+  .hamburger {
+    background: $secondary-clr;
+  }
+  .hamburger:after,
+  .hamburger:before {
+    background: $secondary-clr;
+  }
+  input:checked + .menu {
+    box-shadow: 0 0 0 100vw $primary-darker, 0 0 0 100vh $primary-darker;
+  }
+  a {
+    color: $white;
+  }
+
+  button {
+    background-color: $primary;
+    color: $white;
+  }
+
+  .about {
+    background-color: $white;
+  }
+  .homecontent {
+    p {
+      text-shadow: 2px 2px 4px $white;
+      color: $white;
+      span {
+        color: $secondary-clr;
+        text-shadow: 2px 2px 4px $secondary-clr;
+      }
+    }
+    button {
+      border: 3px solid $white;
+      background-color: $primary;
+      color: $white;
+    }
+  }
+  .titles {
+    color: $white;
+    border-bottom: 0.1em solid $white;
+  }
+  .titleblue {
+    color: $primary;
+    border-bottom: 0.1em solid $primary;
+  }
+  .projects {
+    color: $white;
+    background-color: $primary;
+    .cards {
+      .content {
+        background-color: $white;
+      }
+      h3 {
+        color: $black;
+      }
+      p {
+        color: $black;
+      }
+      .links {
+        a {
+          .button {
+            background-color: $secondary-clr;
+            color: $white;
+          }
+        }
+        .github .button {
+          background-color: #6e5494;
+        }
+      }
+    }
+  }
+}
+
+@mixin lightMode {
+  background-color: $primary-light;
+  .menu {
+    background: $primary-light-darker;
+    box-shadow: 0 0 0 0 $primary-light-darker, 0 0 0 0 $primary-light-darker;
+  }
+  .hamburger {
+    background: $secondary-clr;
+  }
+  .hamburger:after,
+  .hamburger:before {
+    background: $secondary-clr;
+  }
+  input:checked + .menu {
+    box-shadow: 0 0 0 100vw $primary-light-darker, 0 0 0 100vh $primary-light;
+  }
+  a {
+    color: $black;
+  }
+  button {
+    background-color: $primary-light;
+    color: $black;
+  }
+  .homecontent {
+    p {
+      text-shadow: 2px 2px 4px $white;
+      color: $white;
+      span {
+        color: $secondary-clr;
+        text-shadow: 2px 2px 4px $secondary-clr;
+      }
+    }
+    button {
+      border: 3px solid $white;
+      background-color: $primary;
+      color: $white;
+    }
+  }
+  .titles {
+    color: $primary;
+    border-bottom: 0.1em solid $primary;
+  }
+  .titleblue {
+    color: $white;
+    border-bottom: 0.1em solid $white;
+  }
+  .projects {
+    color: $white;
+    background-color: $white;
+    .cards {
+      .content {
+        background-color: $primary;
+      }
+      h3 {
+        color: $white;
+      }
+      p {
+        color: $white;
+      }
+      .links {
+        a {
+          .button {
+            background-color: $secondary-clr;
+            color: $white;
+          }
+        }
+        .github .button {
+          background-color: #6e5494;
+        }
+      }
+    }
+  }
+}

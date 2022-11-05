@@ -29,10 +29,8 @@ label .menu {
   z-index: 998;
   width: 200px;
   height: 200px;
-  background: rgb(27, 36, 47);
   border-radius: 50% 50% 50% 50%;
   transition: 0.5s ease-in-out;
-  box-shadow: 0 0 0 0 rgb(27, 36, 47), 0 0 0 0 rgb(27, 36, 47);
   cursor: pointer;
 }
 label .hamburger {
@@ -41,7 +39,6 @@ label .hamburger {
   left: 50px;
   width: 30px;
   height: 2px;
-  background: #df00fe;
   display: block;
   transform-origin: center;
   transition: 0.5s ease-in-out;
@@ -54,7 +51,6 @@ label .hamburger:before {
   display: block;
   width: 100%;
   height: 100%;
-  background: #df00fe;
 }
 label .hamburger:before {
   top: -10px;
@@ -66,7 +62,6 @@ label input {
   display: none;
 }
 label input:checked + .menu {
-  box-shadow: 0 0 0 100vw rgb(27, 36, 47), 0 0 0 100vh rgb(27, 36, 47);
   border-radius: 0;
 }
 label input:checked + .menu .hamburger {
@@ -86,6 +81,8 @@ label input:checked + .menu + ul {
   transition: 0.5s ease-in-out;
 }
 label ul {
+  text-align: center;
+  list-style: none;
   z-index: 999;
   position: absolute;
   top: 50vh;
@@ -94,11 +91,15 @@ label ul {
   opacity: 1;
   transition: 0.25s 0s ease-in-out;
   visibility: hidden;
+  font-size: 1.5em;
+}
+label ul button {
+  padding: 1em 2em;
+  font-size: 0.5em;
 }
 label a {
   margin-bottom: 1em;
   display: block;
-  color: white;
   text-decoration: none;
 }
 
@@ -112,20 +113,11 @@ label a {
 }
 .home .homecontent p {
   font-size: 1.75em;
-  color: white;
-  text-shadow: 2px 2px 4px white;
-}
-.home .homecontent p span {
-  color: #df00fe;
-  text-shadow: 2px 2px 4px #df00fe;
 }
 .home .homecontent button {
-  color: white;
   width: 15em;
   height: 3em;
   font-size: 1.5em;
-  border: 3px solid white;
-  background-color: rgb(37, 41, 52);
   transition: 0.4s;
   margin: 0 auto;
 }
@@ -142,18 +134,12 @@ label a {
   font-weight: 700;
   font-size: 2em;
   padding-top: 0.5em;
-  border-bottom: 0.1em solid white;
   padding: 0.2em;
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
   margin: 0 auto;
   margin-bottom: 1em;
-}
-
-.titleblue {
-  color: rgb(37, 41, 52);
-  border-bottom: 0.1em solid rgb(37, 41, 52);
 }
 
 .about .descriptionabout {
@@ -165,13 +151,29 @@ label a {
   max-width: calc(50% - 1em);
   margin: 1em;
 }
-.about .computeranimation img {
-  width: 480px;
+.about .codesnippet .name {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  border: 1px solid black;
+  padding: 0.5em 3em;
+  margin: 1em;
+}
+
+code .snippetClr1 {
+  color: green;
+  font-family: raleway, sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+code .snippetClr2 {
+  color: #df00fe;
+  font-family: raleway, sans-serif;
+  font-weight: 600;
+  font-style: normal;
 }
 
 .projects {
-  color: white;
-  background-color: rgb(37, 41, 52);
   margin: 0;
   width: 100vw;
 }
@@ -187,7 +189,6 @@ label a {
   height: -webkit-max-content;
   height: -moz-max-content;
   height: max-content;
-  background-color: white;
   border-radius: 5em 5em 2em 2em;
   padding-bottom: 2em;
 }
@@ -196,14 +197,12 @@ label a {
   border-radius: 3em 3em 0 0;
 }
 .projects .cards h3 {
-  color: black;
   text-align: center;
   font-family: raleway, sans-serif;
   font-weight: 600;
   font-style: normal;
 }
 .projects .cards p {
-  color: black;
   font-size: 1em;
   margin: 5px;
   padding: 1.5em;
@@ -218,11 +217,6 @@ label a {
 }
 .projects .cards .links a .button {
   padding: 0.5em 1em;
-  background-color: #df00fe;
-  color: white;
-}
-.projects .cards .links .github .button {
-  background-color: #6e5494;
 }
 
 @media screen and (min-width: 768px) {
@@ -242,4 +236,138 @@ label a {
   .computeranimation img {
     width: 750px;
   }
+}
+body {
+  background-color: rgb(37, 41, 52);
+}
+body .menu {
+  background: rgb(27, 36, 47);
+  box-shadow: 0 0 0 0 rgb(27, 36, 47), 0 0 0 0 rgb(27, 36, 47);
+}
+body .hamburger {
+  background: #df00fe;
+}
+body .hamburger:after,
+body .hamburger:before {
+  background: #df00fe;
+}
+body input:checked + .menu {
+  box-shadow: 0 0 0 100vw rgb(27, 36, 47), 0 0 0 100vh rgb(27, 36, 47);
+}
+body a {
+  color: white;
+}
+body button {
+  background-color: rgb(37, 41, 52);
+  color: white;
+}
+body .about {
+  background-color: white;
+}
+body .homecontent p {
+  text-shadow: 2px 2px 4px white;
+  color: white;
+}
+body .homecontent p span {
+  color: #df00fe;
+  text-shadow: 2px 2px 4px #df00fe;
+}
+body .homecontent button {
+  border: 3px solid white;
+  background-color: rgb(37, 41, 52);
+  color: white;
+}
+body .titles {
+  color: white;
+  border-bottom: 0.1em solid white;
+}
+body .titleblue {
+  color: rgb(37, 41, 52);
+  border-bottom: 0.1em solid rgb(37, 41, 52);
+}
+body .projects {
+  color: white;
+  background-color: rgb(37, 41, 52);
+}
+body .projects .cards .content {
+  background-color: white;
+}
+body .projects .cards h3 {
+  color: black;
+}
+body .projects .cards p {
+  color: black;
+}
+body .projects .cards .links a .button {
+  background-color: #df00fe;
+  color: white;
+}
+body .projects .cards .links .github .button {
+  background-color: #6e5494;
+}
+
+.lightMode {
+  background-color: #d2d3db;
+}
+.lightMode .menu {
+  background: #9394a5;
+  box-shadow: 0 0 0 0 #9394a5, 0 0 0 0 #9394a5;
+}
+.lightMode .hamburger {
+  background: #df00fe;
+}
+.lightMode .hamburger:after,
+.lightMode .hamburger:before {
+  background: #df00fe;
+}
+.lightMode input:checked + .menu {
+  box-shadow: 0 0 0 100vw #9394a5, 0 0 0 100vh #d2d3db;
+}
+.lightMode a {
+  color: black;
+}
+.lightMode button {
+  background-color: #d2d3db;
+  color: black;
+}
+.lightMode .homecontent p {
+  text-shadow: 2px 2px 4px white;
+  color: white;
+}
+.lightMode .homecontent p span {
+  color: #df00fe;
+  text-shadow: 2px 2px 4px #df00fe;
+}
+.lightMode .homecontent button {
+  border: 3px solid white;
+  background-color: rgb(37, 41, 52);
+  color: white;
+}
+.lightMode .titles {
+  color: rgb(37, 41, 52);
+  border-bottom: 0.1em solid rgb(37, 41, 52);
+}
+.lightMode .titleblue {
+  color: white;
+  border-bottom: 0.1em solid white;
+}
+.lightMode .projects {
+  color: white;
+  background-color: white;
+}
+.lightMode .projects .cards .content {
+  background-color: rgb(37, 41, 52);
+}
+.lightMode .projects .cards h3 {
+  color: white;
+}
+.lightMode .projects .cards p {
+  color: white;
+}
+.lightMode .projects .cards .links a .button {
+  background-color: #df00fe;
+  color: white;
+}
+.lightMode .projects .cards .links .github .button {
+  background-color: #6e5494;
 }/*# sourceMappingURL=style.css.map */

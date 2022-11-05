@@ -1,8 +1,15 @@
+@import "dark-light-mode.scss";
+// primarty colors dark mode
 $primary: rgb(37, 41, 52);
 $primary-darker: rgb(27, 36, 47);
-$secondary-clr: #df00fe;
-$white: white;
+// primary colors lightmode
+$primary-light: #d2d3db;
+$primary-light-darker: #9394a5;
 
+// secondary colors
+$secondary-clr: #df00fe;
+$black: black;
+$white: white;
 * {
   margin: 0;
   padding: 0;
@@ -31,11 +38,11 @@ label {
     z-index: 998;
     width: 200px;
     height: 200px;
-    background: $primary-darker;
+
     border-radius: 50% 50% 50% 50%;
     -webkit-transition: 0.5s ease-in-out;
     transition: 0.5s ease-in-out;
-    box-shadow: 0 0 0 0 $primary-darker, 0 0 0 0 $primary-darker;
+
     cursor: pointer;
   }
   .hamburger {
@@ -44,7 +51,7 @@ label {
     left: 50px;
     width: 30px;
     height: 2px;
-    background: $secondary-clr;
+
     display: block;
     -webkit-transform-origin: center;
     transform-origin: center;
@@ -60,7 +67,6 @@ label {
     display: block;
     width: 100%;
     height: 100%;
-    background: $secondary-clr;
   }
   .hamburger:before {
     top: -10px;
@@ -72,7 +78,6 @@ label {
     display: none;
   }
   input:checked + .menu {
-    box-shadow: 0 0 0 100vw $primary-darker, 0 0 0 100vh $primary-darker;
     border-radius: 0;
   }
   input:checked + .menu .hamburger {
@@ -96,6 +101,8 @@ label {
     transition: 0.5s ease-in-out;
   }
   ul {
+    text-align: center;
+    list-style: none;
     z-index: 999;
     position: absolute;
     top: 50vh;
@@ -106,11 +113,16 @@ label {
     -webkit-transition: 0.25s 0s ease-in-out;
     transition: 0.25s 0s ease-in-out;
     visibility: hidden;
+    font-size: 1.5em;
+    button {
+      padding: 1em 2em;
+      font-size: 0.5em;
+    }
   }
   a {
     margin-bottom: 1em;
     display: block;
-    color: $white;
+
     text-decoration: none;
   }
 }
@@ -125,20 +137,11 @@ label {
   .homecontent {
     p {
       font-size: 1.75em;
-      color: white;
-      text-shadow: 2px 2px 4px $white;
-      span {
-        color: $secondary-clr;
-        text-shadow: 2px 2px 4px $secondary-clr;
-      }
     }
     button {
-      color: white;
       width: 15em;
       height: 3em;
       font-size: 1.5em;
-      border: 3px solid $white;
-      background-color: $primary;
       transition: 0.4s;
       margin: 0 auto;
       i {
@@ -156,17 +159,14 @@ label {
   font-weight: 700;
   font-size: 2em;
   padding-top: 0.5em;
-  border-bottom: 0.1em solid white;
+
   padding: 0.2em;
   width: max-content;
   margin: 0 auto {
     bottom: 1em;
   }
 }
-.titleblue {
-  color: $primary;
-  border-bottom: 0.1em solid $primary;
-}
+
 // about
 .about {
   .descriptionabout {
@@ -178,13 +178,34 @@ label {
       margin: 1em;
     }
   }
-  .computeranimation img {
-    width: 480px;
+  .codesnippet {
+    .name {
+      width: max-content;
+      // background-color: $primary;
+      border: 1px solid black;
+      padding: 0.5em 3em;
+      margin: 1em;
+    }
+  }
+  // .computeranimation img {
+  //   width: 480px;
+  // }
+}
+code {
+  .snippetClr1 {
+    color: green;
+    font-family: raleway, sans-serif;
+    font-weight: 600;
+    font-style: normal;
+  }
+  .snippetClr2 {
+    color: $secondary-clr;
+    font-family: raleway, sans-serif;
+    font-weight: 600;
+    font-style: normal;
   }
 }
 .projects {
-  color: white;
-  background-color: $primary;
   margin: 0;
   width: 100vw;
   .cards {
@@ -196,7 +217,7 @@ label {
     .content {
       width: 400px;
       height: max-content;
-      background-color: $white;
+
       border-radius: 5em 5em 2em 2em;
       padding-bottom: 2em;
 
@@ -206,14 +227,12 @@ label {
       }
     }
     h3 {
-      color: black;
       text-align: center;
       font-family: raleway, sans-serif;
       font-weight: 600;
       font-style: normal;
     }
     p {
-      color: black;
       font-size: 1em;
       margin: 5px;
       padding: 1.5em;
@@ -226,12 +245,7 @@ label {
         text-decoration: none;
         .button {
           padding: 0.5em 1em;
-          background-color: $secondary-clr;
-          color: $white;
         }
-      }
-      .github .button {
-        background-color: #6e5494;
       }
     }
   }
@@ -253,4 +267,12 @@ label {
   .computeranimation img {
     width: 750px;
   }
+}
+
+body {
+  @include darkMode;
+}
+
+.lightMode {
+  @include lightMode;
 }
