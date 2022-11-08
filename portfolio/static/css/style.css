@@ -1,32 +1,85 @@
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
   font-family: raleway, sans-serif;
   font-weight: 400;
   font-style: normal;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-body {
-  min-height: 100vh;
-  min-width: 480px;
-  overflow-x: hidden;
+.about .descriptionabout {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.about .descriptionabout .txt {
+  max-width: calc(50% - 1em);
+  margin: 1em;
+}
+.about .codesnippet .name {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  padding: 0.5em 3em;
+  margin: 1em;
 }
 
-.container {
-  width: 100%;
+.name {
+  background-color: #0d1117;
+  box-shadow: inset -10px -31px 111px 10px rgba(255, 255, 255, 0.75);
+}
+.name code {
+  color: white;
+}
+.name code .snippetClr1 {
+  color: #68b0e5;
+  font-family: raleway, sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+.name code .snippetClr2 {
+  color: #a86263;
+  font-family: raleway, sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url("/static/img/programingview.jpg") no-repeat center;
+  background-size: cover;
+  height: 100vh;
+}
+.home .homecontent p {
+  font-size: 1.75em;
+}
+.home .homecontent button {
+  width: 15em;
+  height: 3em;
+  font-size: 1.5em;
+  transition: 0.4s;
+  margin: 0 auto;
+}
+.home .homecontent button i {
+  font-size: 24px;
+  transition: 0.4s;
+}
+.home .homecontent button:hover i {
+  transform: rotate(90deg);
 }
 
 label {
   position: fixed;
   top: 0;
   right: 0;
+  z-index: 998;
 }
 label .menu {
   position: absolute;
   right: -100px;
   top: -100px;
-  z-index: 998;
   width: 200px;
   height: 200px;
   border-radius: 50% 50% 50% 50%;
@@ -103,76 +156,6 @@ label a {
   text-decoration: none;
 }
 
-.home {
-  background: url("/static/img/programingview.jpg") no-repeat center;
-  background-size: cover;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.home .homecontent p {
-  font-size: 1.75em;
-}
-.home .homecontent button {
-  width: 15em;
-  height: 3em;
-  font-size: 1.5em;
-  transition: 0.4s;
-  margin: 0 auto;
-}
-.home .homecontent button i {
-  font-size: 24px;
-  transition: 0.4s;
-}
-.home .homecontent button button:hover i {
-  transform: rotate(90deg);
-}
-
-.titles {
-  text-align: center;
-  font-weight: 700;
-  font-size: 2em;
-  padding-top: 0.5em;
-  padding: 0.2em;
-  width: -webkit-max-content;
-  width: -moz-max-content;
-  width: max-content;
-  margin: 0 auto;
-  margin-bottom: 1em;
-}
-
-.about .descriptionabout {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.about .descriptionabout .txt {
-  max-width: calc(50% - 1em);
-  margin: 1em;
-}
-.about .codesnippet .name {
-  width: -webkit-max-content;
-  width: -moz-max-content;
-  width: max-content;
-  border: 1px solid black;
-  padding: 0.5em 3em;
-  margin: 1em;
-}
-
-code .snippetClr1 {
-  color: green;
-  font-family: raleway, sans-serif;
-  font-weight: 600;
-  font-style: normal;
-}
-code .snippetClr2 {
-  color: #df00fe;
-  font-family: raleway, sans-serif;
-  font-weight: 600;
-  font-style: normal;
-}
-
 .projects {
   margin: 0;
   width: 100vw;
@@ -219,30 +202,15 @@ code .snippetClr2 {
   padding: 0.5em 1em;
 }
 
-@media screen and (min-width: 768px) {
-  .about .descriptionabout {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-  }
-  .about .descriptionabout .txt {
-    margin-left: 1em;
-  }
-  .computeranimation img {
-    width: 450px;
-  }
-}
-@media screen and (min-width: 1024px) {
-  .computeranimation img {
-    width: 750px;
-  }
-}
 body {
-  background-color: rgb(37, 41, 52);
+  min-height: 100vh;
+  min-width: 480px;
+  overflow-x: hidden;
+  background-color: #252934;
 }
 body .menu {
-  background: rgb(27, 36, 47);
-  box-shadow: 0 0 0 0 rgb(27, 36, 47), 0 0 0 0 rgb(27, 36, 47);
+  background: #1b242f;
+  box-shadow: 0 0 0 0 #1b242f, 0 0 0 0 #1b242f;
 }
 body .hamburger {
   background: #df00fe;
@@ -252,13 +220,13 @@ body .hamburger:before {
   background: #df00fe;
 }
 body input:checked + .menu {
-  box-shadow: 0 0 0 100vw rgb(27, 36, 47), 0 0 0 100vh rgb(27, 36, 47);
+  box-shadow: 0 0 0 100vw #1b242f, 0 0 0 100vh #1b242f;
 }
 body a {
   color: white;
 }
 body button {
-  background-color: rgb(37, 41, 52);
+  background-color: #252934;
   color: white;
 }
 body .about {
@@ -274,7 +242,7 @@ body .homecontent p span {
 }
 body .homecontent button {
   border: 3px solid white;
-  background-color: rgb(37, 41, 52);
+  background-color: #252934;
   color: white;
 }
 body .titles {
@@ -282,12 +250,12 @@ body .titles {
   border-bottom: 0.1em solid white;
 }
 body .titleblue {
-  color: rgb(37, 41, 52);
-  border-bottom: 0.1em solid rgb(37, 41, 52);
+  color: #252934;
+  border-bottom: 0.1em solid #252934;
 }
 body .projects {
   color: white;
-  background-color: rgb(37, 41, 52);
+  background-color: #252934;
 }
 body .projects .cards .content {
   background-color: white;
@@ -304,6 +272,23 @@ body .projects .cards .links a .button {
 }
 body .projects .cards .links .github .button {
   background-color: #6e5494;
+}
+
+.container {
+  width: 100%;
+}
+
+.titles {
+  text-align: center;
+  font-weight: 700;
+  font-size: 2em;
+  padding-top: 0.5em;
+  padding: 0.2em;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  margin: 0 auto;
+  margin-bottom: 1em;
 }
 
 .lightMode {
@@ -340,12 +325,12 @@ body .projects .cards .links .github .button {
 }
 .lightMode .homecontent button {
   border: 3px solid white;
-  background-color: rgb(37, 41, 52);
+  background-color: #252934;
   color: white;
 }
 .lightMode .titles {
-  color: rgb(37, 41, 52);
-  border-bottom: 0.1em solid rgb(37, 41, 52);
+  color: #252934;
+  border-bottom: 0.1em solid #252934;
 }
 .lightMode .titleblue {
   color: white;
@@ -356,7 +341,7 @@ body .projects .cards .links .github .button {
   background-color: white;
 }
 .lightMode .projects .cards .content {
-  background-color: rgb(37, 41, 52);
+  background-color: #252934;
 }
 .lightMode .projects .cards h3 {
   color: white;

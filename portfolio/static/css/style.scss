@@ -1,278 +1,42 @@
-@import "dark-light-mode.scss";
-// primarty colors dark mode
-$primary: rgb(37, 41, 52);
-$primary-darker: rgb(27, 36, 47);
-// primary colors lightmode
-$primary-light: #d2d3db;
-$primary-light-darker: #9394a5;
+@use "abstracts" as *;
+@use "base/reset";
 
-// secondary colors
-$secondary-clr: #df00fe;
-$black: black;
-$white: white;
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: raleway, sans-serif;
-  font-weight: 400;
-  font-style: normal;
-}
-body {
-  min-height: 100vh;
-  min-width: 480px;
-  overflow-x: hidden;
-}
-.container {
-  width: 100%;
-}
-// nav
-label {
-  position: fixed;
-  top: 0;
-  right: 0;
-  .menu {
-    position: absolute;
-    right: -100px;
-    top: -100px;
-    z-index: 998;
-    width: 200px;
-    height: 200px;
+@use "layout/about";
+@use "layout/home";
+@use "layout/nav";
+@use "layout/projects";
+@use "layout/base";
 
-    border-radius: 50% 50% 50% 50%;
-    -webkit-transition: 0.5s ease-in-out;
-    transition: 0.5s ease-in-out;
+@use "components/buttons";
 
-    cursor: pointer;
-  }
-  .hamburger {
-    position: absolute;
-    top: 135px;
-    left: 50px;
-    width: 30px;
-    height: 2px;
+// @import "pages/..";
 
-    display: block;
-    -webkit-transform-origin: center;
-    transform-origin: center;
-    -webkit-transition: 0.5s ease-in-out;
-    transition: 0.5s ease-in-out;
-  }
-  .hamburger:after,
-  .hamburger:before {
-    -webkit-transition: 0.5s ease-in-out;
-    transition: 0.5s ease-in-out;
-    content: "";
-    position: absolute;
-    display: block;
-    width: 100%;
-    height: 100%;
-  }
-  .hamburger:before {
-    top: -10px;
-  }
-  .hamburger:after {
-    bottom: -10px;
-  }
-  input {
-    display: none;
-  }
-  input:checked + .menu {
-    border-radius: 0;
-  }
-  input:checked + .menu .hamburger {
-    -webkit-transform: rotate(45deg);
-    transform: rotate(45deg);
-  }
-  input:checked + .menu .hamburger:after {
-    -webkit-transform: rotate(90deg);
-    transform: rotate(90deg);
-    bottom: 0;
-  }
-  input:checked + .menu .hamburger:before {
-    -webkit-transform: rotate(90deg);
-    transform: rotate(90deg);
-    top: 0;
-  }
-  input:checked + .menu + ul {
-    opacity: 1;
-    visibility: visible;
-    -webkit-transition: 0.5s ease-in-out;
-    transition: 0.5s ease-in-out;
-  }
-  ul {
-    text-align: center;
-    list-style: none;
-    z-index: 999;
-    position: absolute;
-    top: 50vh;
-    left: -50vw;
-    -webkit-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    opacity: 1;
-    -webkit-transition: 0.25s 0s ease-in-out;
-    transition: 0.25s 0s ease-in-out;
-    visibility: hidden;
-    font-size: 1.5em;
-    button {
-      padding: 1em 2em;
-      font-size: 0.5em;
-    }
-  }
-  a {
-    margin-bottom: 1em;
-    display: block;
+@use "themes/darkmode";
+@use "themes/lightmode";
 
-    text-decoration: none;
-  }
-}
-// home
-.home {
-  background: url("/static/img/programingview.jpg") no-repeat center;
-  background-size: cover;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  .homecontent {
-    p {
-      font-size: 1.75em;
-    }
-    button {
-      width: 15em;
-      height: 3em;
-      font-size: 1.5em;
-      transition: 0.4s;
-      margin: 0 auto;
-      i {
-        font-size: 24px;
-        transition: 0.4s;
-      }
-      button:hover i {
-        transform: rotate(90deg);
-      }
-    }
-  }
-}
-.titles {
-  text-align: center;
-  font-weight: 700;
-  font-size: 2em;
-  padding-top: 0.5em;
+// primarty colors dark mo
+// @fu
+//   @return m
+// @mixin theme($light-theme: tr
+//     background:
+// .lightM
+//   @include theme($lig
 
-  padding: 0.2em;
-  width: max-content;
-  margin: 0 auto {
-    bottom: 1em;
-  }
-}
-
-// about
-.about {
-  .descriptionabout {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    .txt {
-      max-width: calc(50% - 1em);
-      margin: 1em;
-    }
-  }
-  .codesnippet {
-    .name {
-      width: max-content;
-      // background-color: $primary;
-      border: 1px solid black;
-      padding: 0.5em 3em;
-      margin: 1em;
-    }
-  }
-  // .computeranimation img {
-  //   width: 480px;
-  // }
-}
-code {
-  .snippetClr1 {
-    color: green;
-    font-family: raleway, sans-serif;
-    font-weight: 600;
-    font-style: normal;
-  }
-  .snippetClr2 {
-    color: $secondary-clr;
-    font-family: raleway, sans-serif;
-    font-weight: 600;
-    font-style: normal;
-  }
-}
-.projects {
-  margin: 0;
-  width: 100vw;
-  .cards {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 20px;
-    z-index: 0;
-    .content {
-      width: 400px;
-      height: max-content;
-
-      border-radius: 5em 5em 2em 2em;
-      padding-bottom: 2em;
-
-      img {
-        width: 400px;
-        border-radius: 3em 3em 0 0;
-      }
-    }
-    h3 {
-      text-align: center;
-      font-family: raleway, sans-serif;
-      font-weight: 600;
-      font-style: normal;
-    }
-    p {
-      font-size: 1em;
-      margin: 5px;
-      padding: 1.5em;
-      padding-top: 0.5em;
-    }
-    .links {
-      display: flex;
-      justify-content: space-around;
-      a {
-        text-decoration: none;
-        .button {
-          padding: 0.5em 1em;
-        }
-      }
-    }
-  }
-}
-@media screen and (min-width: 768px) {
-  .about .descriptionabout {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    .txt {
-      margin-left: 1em;
-    }
-  }
-  .computeranimation img {
-    width: 450px;
-  }
-}
-@media screen and (min-width: 1024px) {
-  .computeranimation img {
-    width: 750px;
-  }
-}
-
-body {
-  @include darkMode;
-}
-
-.lightMode {
-  @include lightMode;
-}
+// @media screen and (min-width: 768px) {
+//   .about .descriptionabout {
+//     display: flex;
+//     flex-direction: row;
+//     justify-content: center;
+//     .txt {
+//       margin-left: 1em;
+//     }
+//   }
+//   .computeranimation img {
+//     width: 450px;
+//   }
+// }
+// @media screen and (min-width: 1024px) {
+//   .computeranimation img {
+//     width: 750px;
+//   }
+// }

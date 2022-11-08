@@ -1,0 +1,6 @@
+@use "variables" as *;
+@mixin font-semibold {
+  font-family: raleway, sans-serif;
+  font-weight: $font-weight-semibold;
+  font-style: normal;
+}
