@@ -1,0 +1,127 @@
+@use "variables" as var;
+@use "typography";
+@mixin flexbox {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+@mixin flex-center {
+  @include flexbox;
+  align-items: center;
+  justify-content: center;
+}
+@mixin flex-direction($value) {
+  @if $value == row-reverse {
+    -webkit-box-direction: reverse;
+    -webkit-box-orient: horizontal;
+  } @else if $value == column {
+    -webkit-box-direction: normal;
+    -webkit-box-orient: vertical;
+  } @else if $value == column-reverse {
+    -webkit-box-direction: reverse;
+    -webkit-box-orient: vertical;
+  } @else {
+    -webkit-box-direction: normal;
+    -webkit-box-orient: horizontal;
+  }
+  -webkit-flex-direction: $value;
+  -moz-flex-direction: $value;
+  -ms-flex-direction: $value;
+  flex-direction: $value;
+}
+
+@mixin flex-center-vert {
+  display: flex;
+  align-items: center;
+}
+@mixin flex-center-horiz {
+  display: flex;
+  justify-content: center;
+}
+@mixin reset-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+// @mixin font-size($size, $base: 16) {
+//   font-size: $size; // fallback for old browsers
+//   font-size: ($size / $base) * 1rem;
+// }
+
+$breakpoints: (
+  "xs": 0,
+  "sm": 480px,
+  "md": 720px,
+  "lg": 960px,
+  "xl": 1200px,
+);
+@mixin mediaquery($breakpoints) {
+  @if $breakpoints == "xs" {
+    @media (min-width: ("xs")) {
+      @content;
+    }
+  }
+}
+// @mixin xs {
+//   @media (min-width: map-get($breakpoints, "xs")) {
+//     @content;
+//   }
+// }
+
+// @mixin sm {
+//   @media (min-width: map-get($breakpoints, "sm")) {
+//     @content;
+//   }
+// }
+
+// @mixin md {
+//   @media (min-width: map-get($breakpoints, "md")) {
+//     @content;
+//   }
+// }
+
+// @mixin lg {
+//   @media (min-width: map-get($breakpoints, "lg")) {
+//     @content;
+//   }
+// }
+
+// @mixin xl {
+//   @media (min-width: map-get($breakpoints, "xl")) {
+//     @content;
+//   }
+// }
+
+@mixin breakpoint($bp: 0) {
+  @media (min-width: $bp) {
+    @content;
+  }
+}
+
+.responsive-test {
+  @include mediaquery("xs") {
+    color: red;
+  }
+  // @include sm {
+  //   color: blue;
+  // }
+  // @include md {
+  //   color: green;
+  // }
+  // @include lg {
+  //   color: purple;
+  // }
+  // @include xl {
+  //   color: orange;
+  // }
+  // @include breakpoint(1400px) {
+  //   color: pink;
+  // }
+}
+
+@mixin hidden {
+  display: none;
+  visibility: hidden;
+}

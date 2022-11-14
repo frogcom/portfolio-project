@@ -1,3 +1,16 @@
+@font-face {
+  font-family: "Cascadia Code";
+  font-style: normal;
+  font-weight: 400;
+  src: url("Cascadia.ttf") format("truetype");
+  font-display: fallback;
+}
+@media (min-width: xs) {
+  .responsive-test {
+    color: red;
+  }
+}
+
 * {
   font-family: raleway, sans-serif;
   font-weight: 400;
@@ -7,53 +20,166 @@
   padding: 0;
 }
 
-.about .descriptionabout {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.about .descriptionabout .txt {
-  max-width: calc(50% - 1em);
-  margin: 1em;
-}
-.about .codesnippet .name {
-  width: -webkit-max-content;
-  width: -moz-max-content;
-  width: max-content;
-  padding: 0.5em 3em;
-  margin: 1em;
-}
-
-.name {
-  background-color: #0d1117;
-  box-shadow: inset -10px -31px 111px 10px rgba(255, 255, 255, 0.75);
-}
-.name code {
-  color: white;
-}
-.name code .snippetClr1 {
-  color: #68b0e5;
-  font-family: raleway, sans-serif;
-  font-weight: 600;
-  font-style: normal;
-}
-.name code .snippetClr2 {
-  color: #a86263;
-  font-family: raleway, sans-serif;
-  font-weight: 600;
-  font-style: normal;
-}
-
-.home {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: url("/static/img/programingview.jpg") no-repeat center;
+body {
+  background: url("/static/img/programingview.jpg") no-repeat center center fixed;
   background-size: cover;
   height: 100vh;
 }
+
+body {
+  min-height: 100vh;
+  min-width: 480px;
+  overflow-x: hidden;
+}
+body .menu {
+  background: rgb(56, 56, 56);
+  box-shadow: 0 0 0 0 rgb(56, 56, 56), 0 0 0 0 rgb(56, 56, 56);
+}
+body .hamburger {
+  background: rgb(220, 40, 41);
+}
+body .hamburger:after,
+body .hamburger:before {
+  background: rgb(220, 40, 41);
+}
+body input:checked + .menu {
+  box-shadow: 0 0 0 100vw rgb(56, 56, 56), 0 0 0 100vh rgb(56, 56, 56);
+}
+body a {
+  color: rgb(242, 242, 242);
+}
+body button {
+  background-color: rgb(56, 56, 56);
+  color: rgb(242, 242, 242);
+}
+body .homecontent p {
+  text-shadow: 2px 2px 4px rgb(242, 242, 242);
+  color: rgb(242, 242, 242);
+}
+body .homecontent p span {
+  color: rgb(220, 40, 41);
+  text-shadow: 2px 2px 4px rgb(220, 40, 41);
+}
+body .homecontent button {
+  border: 3px solid rgb(242, 242, 242);
+  background-color: rgb(56, 56, 56);
+  color: rgb(242, 242, 242);
+}
+body .titles {
+  color: rgb(242, 242, 242);
+  border-bottom: 0.1em solid rgb(242, 242, 242);
+}
+body .titleblue {
+  color: rgb(56, 56, 56);
+  border-bottom: 0.1em solid rgb(56, 56, 56);
+}
+body .projects {
+  color: rgb(242, 242, 242);
+}
+body .projects .cards .content {
+  background-color: rgb(242, 242, 242);
+}
+body .projects .cards h3 {
+  color: black;
+}
+body .projects .cards p {
+  color: black;
+}
+body .projects .cards .links a .button {
+  background-color: rgb(220, 40, 41);
+  color: rgb(242, 242, 242);
+}
+body .projects .cards .links .github .button {
+  background-color: #6e5494;
+}
+
+.container {
+  width: 100%;
+}
+
+.titles {
+  text-align: center;
+  font-weight: 700;
+  font-size: 2em;
+  padding-top: 0.5em;
+  padding: 0.2em;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  margin: 0 auto;
+  margin-bottom: 1em;
+}
+
+@font-face {
+  font-family: "Cascadia Code";
+  font-style: normal;
+  font-weight: 400;
+  src: url("Cascadia.ttf") format("truetype");
+  font-display: fallback;
+}
+.about {
+  height: 101vh;
+  background-color: rgb(119, 119, 119);
+}
+.about .vscode {
+  margin: 0 auto;
+  width: 80%;
+}
+.about .vscode .tab {
+  display: flex;
+  background-color: rgb(64, 64, 64);
+}
+.about .vscode .tab div {
+  padding: 1em;
+  border: 1px solid black;
+  font-family: monospace !important;
+}
+.about .vscode .tab div.active {
+  background-color: rgb(30, 30, 30);
+}
+.about .vscode .tab div i {
+  font-size: 1.5em;
+  color: rgb(225, 215, 14);
+}
+.about .vscode #personal {
+  display: block;
+}
+.about .vscode .content {
+  display: flex;
+  color: rgb(160, 160, 160);
+  background-color: rgb(30, 30, 30);
+}
+.about .vscode .content .linenumber {
+  display: -moz-flex;
+  display: flex;
+  -moz-flex-direction: column;
+  flex-direction: column;
+}
+.about .vscode .content span {
+  font-family: monospace !important;
+  margin-left: 2em;
+  line-height: 1.5;
+}
+.about .vscode .content .textarea code {
+  font-family: monospace !important;
+  line-height: 1;
+  background-color: rgb(30, 30, 30);
+}
+.about .vscode .codecontent {
+  display: none;
+}
+
+.home {
+  display: -moz-flex;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  -moz-flex-direction: column;
+  flex-direction: column;
+  height: 100%;
+}
 .home .homecontent p {
-  font-size: 1.75em;
+  font-size: 1.5em;
 }
 .home .homecontent button {
   width: 15em;
@@ -63,7 +189,7 @@
   margin: 0 auto;
 }
 .home .homecontent button i {
-  font-size: 24px;
+  font-size: 1em;
   transition: 0.4s;
 }
 .home .homecontent button:hover i {
@@ -161,198 +287,16 @@ label a {
   width: 100vw;
 }
 .projects .cards {
+  -moz-flex-direction: row;
+  flex-direction: row;
+  display: -moz-flex;
   display: flex;
+  align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 20px;
-  z-index: 0;
-}
-.projects .cards .content {
+  height: 700px;
   width: 400px;
-  height: -webkit-max-content;
-  height: -moz-max-content;
-  height: max-content;
-  border-radius: 5em 5em 2em 2em;
-  padding-bottom: 2em;
-}
-.projects .cards .content img {
-  width: 400px;
-  border-radius: 3em 3em 0 0;
-}
-.projects .cards h3 {
-  text-align: center;
-  font-family: raleway, sans-serif;
-  font-weight: 600;
-  font-style: normal;
-}
-.projects .cards p {
-  font-size: 1em;
-  margin: 5px;
-  padding: 1.5em;
-  padding-top: 0.5em;
-}
-.projects .cards .links {
-  display: flex;
-  justify-content: space-around;
-}
-.projects .cards .links a {
-  text-decoration: none;
-}
-.projects .cards .links a .button {
-  padding: 0.5em 1em;
-}
-
-body {
-  min-height: 100vh;
-  min-width: 480px;
-  overflow-x: hidden;
-  background-color: #252934;
-}
-body .menu {
-  background: #1b242f;
-  box-shadow: 0 0 0 0 #1b242f, 0 0 0 0 #1b242f;
-}
-body .hamburger {
-  background: #df00fe;
-}
-body .hamburger:after,
-body .hamburger:before {
-  background: #df00fe;
-}
-body input:checked + .menu {
-  box-shadow: 0 0 0 100vw #1b242f, 0 0 0 100vh #1b242f;
-}
-body a {
-  color: white;
-}
-body button {
-  background-color: #252934;
-  color: white;
-}
-body .about {
-  background-color: white;
-}
-body .homecontent p {
-  text-shadow: 2px 2px 4px white;
-  color: white;
-}
-body .homecontent p span {
-  color: #df00fe;
-  text-shadow: 2px 2px 4px #df00fe;
-}
-body .homecontent button {
-  border: 3px solid white;
-  background-color: #252934;
-  color: white;
-}
-body .titles {
-  color: white;
-  border-bottom: 0.1em solid white;
-}
-body .titleblue {
-  color: #252934;
-  border-bottom: 0.1em solid #252934;
-}
-body .projects {
-  color: white;
-  background-color: #252934;
-}
-body .projects .cards .content {
-  background-color: white;
-}
-body .projects .cards h3 {
-  color: black;
-}
-body .projects .cards p {
-  color: black;
-}
-body .projects .cards .links a .button {
-  background-color: #df00fe;
-  color: white;
-}
-body .projects .cards .links .github .button {
-  background-color: #6e5494;
-}
-
-.container {
-  width: 100%;
-}
-
-.titles {
-  text-align: center;
-  font-weight: 700;
-  font-size: 2em;
-  padding-top: 0.5em;
-  padding: 0.2em;
-  width: -webkit-max-content;
-  width: -moz-max-content;
-  width: max-content;
-  margin: 0 auto;
-  margin-bottom: 1em;
-}
-
-.lightMode {
-  background-color: #d2d3db;
-}
-.lightMode .menu {
-  background: #9394a5;
-  box-shadow: 0 0 0 0 #9394a5, 0 0 0 0 #9394a5;
-}
-.lightMode .hamburger {
-  background: #df00fe;
-}
-.lightMode .hamburger:after,
-.lightMode .hamburger:before {
-  background: #df00fe;
-}
-.lightMode input:checked + .menu {
-  box-shadow: 0 0 0 100vw #9394a5, 0 0 0 100vh #d2d3db;
-}
-.lightMode a {
-  color: black;
-}
-.lightMode button {
-  background-color: #d2d3db;
-  color: black;
-}
-.lightMode .homecontent p {
-  text-shadow: 2px 2px 4px white;
-  color: white;
-}
-.lightMode .homecontent p span {
-  color: #df00fe;
-  text-shadow: 2px 2px 4px #df00fe;
-}
-.lightMode .homecontent button {
-  border: 3px solid white;
-  background-color: #252934;
-  color: white;
-}
-.lightMode .titles {
-  color: #252934;
-  border-bottom: 0.1em solid #252934;
-}
-.lightMode .titleblue {
-  color: white;
-  border-bottom: 0.1em solid white;
-}
-.lightMode .projects {
-  color: white;
-  background-color: white;
-}
-.lightMode .projects .cards .content {
-  background-color: #252934;
-}
-.lightMode .projects .cards h3 {
-  color: white;
-}
-.lightMode .projects .cards p {
-  color: white;
-}
-.lightMode .projects .cards .links a .button {
-  background-color: #df00fe;
-  color: white;
-}
-.lightMode .projects .cards .links .github .button {
-  background-color: #6e5494;
+  background-color: img;
+  background-color-width: 400px;
+  background-color-height: auto;
 }/*# sourceMappingURL=style.css.map */

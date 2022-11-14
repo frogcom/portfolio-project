@@ -1,0 +1,27 @@
+@use "../abstracts" as *;
+@use "../themes" as *;
+body {
+  min-height: 100vh;
+  min-width: 480px;
+  overflow-x: hidden;
+  @include darkMode;
+}
+.container {
+  width: 100%;
+}
+.titles {
+  text-align: center;
+  font-weight: map-get($font-weights, "bold");
+  font-size: map-get($sizes, size-6);
+  padding-top: map-get($sizes, size-2);
+
+  padding: 0.2em;
+  width: max-content;
+  margin: 0 auto {
+    bottom: map-get($sizes, size-4);
+  }
+}
+
+// .lightMode {
+//   @include lightMode;
+// }

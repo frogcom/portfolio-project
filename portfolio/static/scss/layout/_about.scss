@@ -1,0 +1,91 @@
+@use "../abstracts" as *;
+@use "../themes" as *;
+// about
+@font-face {
+  font-family: "Cascadia Code";
+  font-style: normal;
+  font-weight: 400;
+  src: url("Cascadia.ttf") format("truetype");
+  font-display: fallback;
+}
+
+.about {
+  height: 101vh;
+  background-color: $primary-2;
+
+  .vscode {
+    margin: 0 auto;
+    width: 80%;
+    .tab {
+      display: flex;
+      background-color: map-get($code-snippets, "background-clr-tabs");
+      // background-color: $background-clr-tabs;
+      color: map-get($code-snippets, "text-clr-white");
+      // color: $text-color-white;
+      div {
+        padding: 1em;
+        border: 1px solid black;
+        font-family: monospace !important;
+        &.active {
+          background-color: map-get($code-snippets, "background-clr-editor");
+        }
+        i {
+          font-size: 1.5em;
+          color: map-get($code-snippets, "brackets");
+        }
+      }
+    }
+    #personal {
+      display: block;
+    }
+    .content {
+      display: flex;
+      color: map-get($code-snippets, "text-clr");
+
+      background-color: map-get($code-snippets, "background-clr-editor");
+
+      .linenumber {
+        @include flexbox;
+        @include flex-direction(column);
+      }
+      span {
+        font-family: monospace !important;
+
+        margin-left: 2em;
+        line-height: 1.5;
+      }
+      .textarea {
+        code {
+          font-family: monospace !important;
+          line-height: 1;
+          background-color: map-get($code-snippets, "background-clr-editor");
+        }
+      }
+    }
+    .codecontent {
+      display: none;
+    }
+  }
+}
+// .type {
+//   color: #0000;
+//   background: linear-gradient(-90deg, #00dffc 5px, #0000 0) 10px 0,
+//     linear-gradient(#00dffc 0 0) 0 0;
+//   background-size: calc(var(--n) * 1ch) 200%;
+//   -webkit-background-clip: padding-box, text;
+//   background-clip: padding-box, text;
+//   background-repeat: no-repeat;
+//   animation: b 0.7s infinite steps(1),
+//     t calc(var(--n) * 0.1s) steps(var(--n)) forwards;
+// }
+
+// @keyframes t {
+//   from {
+//     background-size: 0 200%;
+//   }
+// }
+// @keyframes b {
+//   50% {
+//     background-position: 0 -100%, 0 0;
+//   }
+// }

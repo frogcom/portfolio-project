@@ -1,0 +1,14 @@
+@use "../abstracts" as *;
+* {
+  @include font-regular;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  // overflow-x: hidden;
+}
+body {
+  background: url("/static/img/programingview.jpg") no-repeat center center
+    fixed;
+  background-size: cover;
+  height: 100vh;
+}

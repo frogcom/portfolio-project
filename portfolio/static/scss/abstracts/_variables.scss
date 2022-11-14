@@ -1,0 +1,33 @@
+$primary: rgb(56, 56, 56);
+$primary-2: rgb(119, 119, 119);
+$primary-3: rgb(199, 199, 199);
+$primary-4: rgba(242, 242, 242);
+$secondary-clr: rgb(220, 40, 41);
+$black: black;
+
+// fonts
+$font-weights: (
+  "light": 300,
+  "regular": 400,
+  "medium": 500,
+  "semibold": 600,
+  "bold": 700,
+);
+$font-weight-light: 300;
+$font-weight-regular: 400;
+$font-weight-medium: 500;
+$font-weight-semibold: 600;
+$font-weight-bold: 700;
+
+$raleway-font: raleway, sans-serif;
+
+$code-snippets: (
+  "brackets": rgb(225, 215, 14),
+  "names": rgb(94, 221, 253),
+  "strings": rgb(228, 250, 140),
+  "number": rgb(189, 147, 249),
+  "quotes": rgb(255, 121, 197),
+  "background-clr-tabs": rgb(64, 64, 64),
+  "background-clr-editor": rgb(30, 30, 30),
+  "text-clr": rgb(160, 160, 160),
+);

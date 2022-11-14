@@ -1,0 +1,11 @@
+@use "base/reset";
+@use "layout/base";
+@use "layout/about";
+@use "layout/home";
+@use "layout/nav";
+@use "layout/projects";
+
+@use "components/buttons";
+// @import "pages/..";
+@use "themes/darkmode";
+@use "themes/lightmode";

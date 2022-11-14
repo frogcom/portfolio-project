@@ -1,0 +1,76 @@
+@use "../abstracts" as *;
+@mixin darkMode {
+  // background-color: $primary;
+  .menu {
+    background: $primary;
+    box-shadow: 0 0 0 0 $primary, 0 0 0 0 $primary;
+  }
+  .hamburger {
+    background: $secondary-clr;
+  }
+  .hamburger:after,
+  .hamburger:before {
+    background: $secondary-clr;
+  }
+  input:checked + .menu {
+    box-shadow: 0 0 0 100vw $primary, 0 0 0 100vh $primary;
+  }
+  a {
+    color: $primary-4;
+  }
+
+  button {
+    background-color: $primary;
+    color: $primary-4;
+  }
+
+  .homecontent {
+    p {
+      text-shadow: 2px 2px 4px $primary-4;
+      color: $primary-4;
+      span {
+        color: $secondary-clr;
+        text-shadow: 2px 2px 4px $secondary-clr;
+      }
+    }
+    button {
+      border: 3px solid $primary-4;
+      background-color: $primary;
+      color: $primary-4;
+    }
+  }
+  .titles {
+    color: $primary-4;
+    border-bottom: 0.1em solid $primary-4;
+  }
+  .titleblue {
+    color: $primary;
+    border-bottom: 0.1em solid $primary;
+  }
+  .projects {
+    color: $primary-4;
+    // background-color: $primary;
+    .cards {
+      .content {
+        background-color: $primary-4;
+      }
+      h3 {
+        color: $black;
+      }
+      p {
+        color: $black;
+      }
+      .links {
+        a {
+          .button {
+            background-color: $secondary-clr;
+            color: $primary-4;
+          }
+        }
+        .github .button {
+          background-color: #6e5494;
+        }
+      }
+    }
+  }
+}

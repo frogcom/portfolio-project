@@ -1,0 +1,17 @@
+{
+  "Cas Meijer": {
+    "name": {
+      "firstname": "cas",
+      "lastname": "meijer"
+    },
+    "age": "16",
+    "penis": {
+      "flaccid": "2cm",
+      "erect": "20cm"
+    }
+  },
+  "skills": {
+    "coding": ["html", "css", "sass", "javascript", "php"],
+    "social": ["samenwerken", "comunication"]
+  }
+}

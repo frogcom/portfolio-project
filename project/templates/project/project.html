@@ -3,22 +3,20 @@
 
 
 <h2 class="titles">project</h2>
-<div class="cards " data-aos="fade-up">
+<div class="cards ">
     {% for project in project.all %}
     <div class="content">
         <img src="{{ project.image.url }}" loading="lazy" />
         <h3>{{project.title}}</h3>
-        <p>{{ project.txt_short }}</p>
+        <!-- <p>{{ project.txt_short }}</p> -->
         <div class="links">
             <a href="https://{{ project.live_url }}" target="_blank">
-                <div class="button">
-                    view project
-                </div>
+
+                view project
+
             </a>
             <a href="{{ project.github_url }}" target="_blank" class="github">
-                <div class="button">
-                    link to github
-                </div>
+                github
             </a>
         </div>
 

@@ -1,0 +1,17 @@
+@use "../abstracts" as *;
+@use "../themes" as *;
+.projects {
+  margin: 0;
+  width: 100vw;
+  .cards {
+    @include flex-direction(row);
+    @include flex-center;
+    flex-wrap: wrap;
+    height: 700px;
+    width: 400px;
+    background-color: img {
+      width: 400px;
+      height: auto;
+    }
+  }
+}

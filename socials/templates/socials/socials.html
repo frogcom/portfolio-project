@@ -1,6 +1,6 @@
 {% extends 'index.html' %}
 {% block socials %}
-<h1>socials</h1>
+<h2>socials</h2>
 {% for socials in socials.all %}
 <a href="{{socials.link_to}}">
     <img src="{{ socials.image.url }}" /></a>
