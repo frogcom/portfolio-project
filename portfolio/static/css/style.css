@@ -73,25 +73,6 @@ body .titleblue {
   color: rgb(56, 56, 56);
   border-bottom: 0.1em solid rgb(56, 56, 56);
 }
-body .projects {
-  color: rgb(242, 242, 242);
-}
-body .projects .cards .content {
-  background-color: rgb(242, 242, 242);
-}
-body .projects .cards h3 {
-  color: black;
-}
-body .projects .cards p {
-  color: black;
-}
-body .projects .cards .links a .button {
-  background-color: rgb(220, 40, 41);
-  color: rgb(242, 242, 242);
-}
-body .projects .cards .links .github .button {
-  background-color: #6e5494;
-}
 
 .container {
   width: 100%;
@@ -286,17 +267,23 @@ label a {
   margin: 0;
   width: 100vw;
 }
-.projects .cards {
-  -moz-flex-direction: row;
-  flex-direction: row;
+
+.cards {
   display: -moz-flex;
   display: flex;
   align-items: center;
-  justify-content: center;
+  -moz-flex-direction: column;
+  flex-direction: column;
   flex-wrap: wrap;
-  height: 700px;
+  width: 100%;
+  height: 100vh;
+}
+.cards .content {
   width: 400px;
-  background-color: img;
-  background-color-width: 400px;
-  background-color-height: auto;
+  background-color: rgb(56, 56, 56);
+  height: 500px;
+}
+.cards img {
+  width: 400px;
+  height: auto;
 }/*# sourceMappingURL=style.css.map */

@@ -47,30 +47,4 @@
     color: $primary;
     border-bottom: 0.1em solid $primary;
   }
-  .projects {
-    color: $primary-4;
-    // background-color: $primary;
-    .cards {
-      .content {
-        background-color: $primary-4;
-      }
-      h3 {
-        color: $black;
-      }
-      p {
-        color: $black;
-      }
-      .links {
-        a {
-          .button {
-            background-color: $secondary-clr;
-            color: $primary-4;
-          }
-        }
-        .github .button {
-          background-color: #6e5494;
-        }
-      }
-    }
-  }
 }

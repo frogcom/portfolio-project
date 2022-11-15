@@ -5,29 +5,30 @@ $font-style-italic: italic;
 
 @mixin font-light {
   font-family: $raleway-font;
-  font-weight: $font-weight-light;
+  font-weight: map-get($font-weights, light);
   font-style: $font-style-normal;
 }
 
 @mixin font-regular {
   font-family: $raleway-font;
-  font-weight: $font-weight-regular;
+  font-weight: map-get($font-weights, regular);
   font-style: $font-style-normal;
 }
 @mixin font-medium {
   font-family: $raleway-font;
-  font-weight: $font-weight-medium;
+  font-weight: map-get($font-weights, medium);
   font-style: $font-style-normal;
 }
 
 @mixin font-semibold {
   font-family: $raleway-font;
-  font-weight: $font-weight-semibold;
+  font-weight: map-get($font-weights, semibold);
   font-style: $font-style-normal;
 }
 @mixin font-bold {
   font-family: $raleway-font;
-  font-weight: $font-weight-bold;
+  font-weight: map-get($font-weights, bold);
+
   font-style: $font-style-normal;
 }
 @font-face {

@@ -3,15 +3,22 @@
 .projects {
   margin: 0;
   width: 100vw;
-  .cards {
-    @include flex-direction(row);
-    @include flex-center;
-    flex-wrap: wrap;
-    height: 700px;
+}
+.cards {
+  @include flexbox;
+  @include flex-center-vert;
+  @include flex-direction(column);
+  flex-wrap: wrap;
+
+  width: 100%;
+  height: 100vh;
+  .content {
     width: 400px;
-    background-color: img {
-      width: 400px;
-      height: auto;
-    }
+    background-color: $primary;
+    height: 500px;
+  }
+  img {
+    width: 400px;
+    height: auto;
   }
 }

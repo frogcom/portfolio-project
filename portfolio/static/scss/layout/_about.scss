@@ -4,7 +4,8 @@
 @font-face {
   font-family: "Cascadia Code";
   font-style: normal;
-  font-weight: 400;
+  font-weight: map-get($font-weights, regular);
+
   src: url("Cascadia.ttf") format("truetype");
   font-display: fallback;
 }

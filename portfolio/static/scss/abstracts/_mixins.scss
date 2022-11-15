@@ -8,7 +8,6 @@
   display: flex;
 }
 @mixin flex-center {
-  @include flexbox;
   align-items: center;
   justify-content: center;
 }
@@ -33,11 +32,9 @@
 }
 
 @mixin flex-center-vert {
-  display: flex;
   align-items: center;
 }
 @mixin flex-center-horiz {
-  display: flex;
   justify-content: center;
 }
 @mixin reset-list {

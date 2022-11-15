@@ -2,6 +2,7 @@
 @use "../themes" as *;
 
 .home {
+  @include flexbox;
   @include flex-center;
   @include flex-direction(column);
 
