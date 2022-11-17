@@ -4,17 +4,6 @@ $primary-3: rgb(199, 199, 199);
 $primary-4: rgba(242, 242, 242);
 $secondary-clr: rgb(220, 40, 41);
 $black: black;
-
-// fonts
-$font-weights: (
-  "light": 300,
-  "regular": 400,
-  "medium": 500,
-  "semibold": 600,
-  "bold": 700,
-);
-
-$raleway-font: raleway, sans-serif;
 $code-snippets: (
   "brackets": rgb(225, 215, 14),
   "names": rgb(94, 221, 253),
@@ -25,3 +14,13 @@ $code-snippets: (
   "background-clr-editor": rgb(30, 30, 30),
   "text-clr": rgb(160, 160, 160),
 );
+// fonts
+$font-weights: (
+  "light": 300,
+  "regular": 400,
+  "medium": 500,
+  "semibold": 600,
+  "bold": 700,
+);
+
+$raleway-font: raleway, sans-serif;

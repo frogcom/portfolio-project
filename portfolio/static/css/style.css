@@ -5,12 +5,6 @@
   src: url("Cascadia.ttf") format("truetype");
   font-display: fallback;
 }
-@media (min-width: xs) {
-  .responsive-test {
-    color: red;
-  }
-}
-
 * {
   font-family: raleway, sans-serif;
   font-weight: 400;
@@ -21,14 +15,11 @@
 }
 
 body {
+  min-height: 100vh;
+  min-width: 480px;
   background: url("/static/img/programingview.jpg") no-repeat center center fixed;
   background-size: cover;
   height: 100vh;
-}
-
-body {
-  min-height: 100vh;
-  min-width: 480px;
   overflow-x: hidden;
 }
 body .menu {
@@ -263,27 +254,76 @@ label a {
   text-decoration: none;
 }
 
-.projects {
-  margin: 0;
-  width: 100vw;
+.cards {
+  position: relative;
 }
 
-.cards {
-  display: -moz-flex;
+.projecthighlited {
+  position: relative;
+  width: 350px;
+  min-height: 350px;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
   display: flex;
-  align-items: center;
-  -moz-flex-direction: column;
+  flex-direction: row;
+  gap: 2em;
+  margin: 1em;
+}
+.projecthighlited .cards {
+  display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
+}
+.projecthighlited .cards .backgroundimg {
+  content: " ";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
   width: 100%;
-  height: 100vh;
-}
-.cards .content {
-  width: 400px;
+  height: 100%;
+  min-height: 400px;
+  background-position: 50% 0 !important;
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
   background-color: rgb(56, 56, 56);
-  height: 500px;
 }
-.cards img {
-  width: 400px;
-  height: auto;
+.projecthighlited .cards .projectContent {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  position: relative;
+  padding: 1.5em;
+  opacity: 1;
+  width: 350px;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+}
+.projecthighlited .cards .projectContent .projectDescription {
+  font-family: raleway, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: rgb(119, 119, 119);
+}
+.projecthighlited .cards .projectContent .projectLinks {
+  display: flex;
+  justify-content: space-between;
+}
+.projecthighlited .cards .projectContent .projectLinks .icon {
+  color: rgb(220, 40, 41);
+  font-size: 1.5em;
+}
+.projecthighlited .cards .projectContent .projectLinks .mapIcon {
+  font-size: 4em;
+}
+.projecthighlited .cards .projectContent a {
+  text-decoration: none;
+}
+.projecthighlited .cards .projectContent a .projectTitle {
+  font-size: 2em;
+  color: rgb(199, 199, 199);
+  font-family: raleway, sans-serif;
+  font-weight: 600;
+  font-style: normal;
 }/*# sourceMappingURL=style.css.map */

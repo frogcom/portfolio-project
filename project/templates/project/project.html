@@ -1,27 +1,29 @@
 {% extends 'index.html' %}
 {% block project %}
-
-
-<h2 class="titles">project</h2>
-<div class="cards ">
+<div class="projecthighlited">
     {% for project in project.all %}
-    <div class="content">
-        <img src="{{ project.image.url }}" loading="lazy" />
-        <h3>{{project.title}}</h3>
-        <!-- <p>{{ project.txt_short }}</p> -->
-        <div class="links">
-            <a href="https://{{ project.live_url }}" target="_blank">
+    <div class="cards">
+        <div class="projectContent">
+            <!-- <img src="{{ project.image.url }}" loading="lazy" /> -->
+            <div class="projectLinks">
+                <i class='bx bx-folder icon mapIcon'></i>
+                <div class="links">
+                    <a href="https://{{ project.live_url }}"><i class='bx bx-link-external icon'></i></a>
+                    <a href="{{ project.github_url }}"><i class='bx bxl-github icon'></i></a>
+                </div>
 
-                view project
-
+            </div>
+            <a href="#">
+                <h3 class="projectTitle">{{project.title}}</h3>
             </a>
-            <a href="{{ project.github_url }}" target="_blank" class="github">
-                github
-            </a>
+            <div class="projectDescription">
+                <p>{{ project.txt_short }}</p>
+            </div>
+            <div class="projectTags"> github sass html js pyton</div>
         </div>
-
+        <div class="backgroundimg" style="background: url('{{ project.image.url  }}');"></div>
     </div>
     {% endfor %}
-
 </div>
+
 {% endblock %}

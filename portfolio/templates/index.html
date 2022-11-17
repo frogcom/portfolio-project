@@ -12,8 +12,6 @@
     <link rel="stylesheet" href="https://use.typekit.net/prr6kom.css">
     <!-- box icons -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <!-- aos -->
-    <!-- <link rel="stylesheet" href="{% static 'aos/aos.css' %}" /> -->
     <!-- favicon -->
     <link rel="shortcut icon" type="image/png" href="{% static 'img/favicon.ico' %}" />
     <!-- code snippets -->
@@ -25,7 +23,7 @@
 </head>
 
 <body>
-    <label>
+    <!-- <label>
         <input type="checkbox">
         <span class="menu"> <span class="hamburger"></span> </span>
         <ul>
@@ -38,7 +36,7 @@
             <button class="switch">toggle dark mode</button>
 
         </ul>
-    </label>
+    </label> -->
 
     {% block socials %}
     {% endblock %}
@@ -127,6 +125,8 @@
             </div>
         </section>
         <section class="projects">
+            <h3 class="titles">project</h3>
+
             {% block project %}
             {% endblock %}
         </section>

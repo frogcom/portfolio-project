@@ -3,6 +3,10 @@
 body {
   min-height: 100vh;
   min-width: 480px;
+  background: url("/static/img/programingview.jpg") no-repeat center center
+    fixed;
+  background-size: cover;
+  height: 100vh;
   overflow-x: hidden;
   @include darkMode;
 }
