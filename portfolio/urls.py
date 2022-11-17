@@ -14,9 +14,12 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path, include 
+from django.urls import path, include
 from django.conf import settings
 import project.views
+from wagtail.admin import urls as wagtailadmin_urls
+from wagtail import urls as wagtail_urls
+from wagtail.documents import urls as wagtaildocs_urls
 
 from . import views
 from django.conf.urls.static import static 
@@ -27,6 +30,9 @@ urlpatterns = [
  path('project/', include('project.urls')), 
  path('accounts/', include('django.contrib.auth.urls')),
  path('accounts/', include('accounts.urls')), # gebruikers
+ path('cms/', include(wagtailadmin_urls)),
+ path('documents/', include(wagtaildocs_urls)),
+ path('pages/', include(wagtail_urls)),
  ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
  
 
