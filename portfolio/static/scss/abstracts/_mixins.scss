@@ -1,9 +1,11 @@
 @use "variables" as var;
 @use "typography";
+
 @mixin hidden {
   display: none;
   visibility: hidden;
 }
+
 @mixin flexbox {
   display: -webkit-box;
   display: -webkit-flex;
@@ -11,24 +13,33 @@
   display: -ms-flexbox;
   display: flex;
 }
+
 @mixin flex-center {
   align-items: center;
   justify-content: center;
 }
+
 @mixin flex-direction($value) {
-  @if $value == row-reverse {
+  @if $value ==row-reverse {
     -webkit-box-direction: reverse;
     -webkit-box-orient: horizontal;
-  } @else if $value == column {
+  }
+
+  @else if $value ==column {
     -webkit-box-direction: normal;
     -webkit-box-orient: vertical;
-  } @else if $value == column-reverse {
+  }
+
+  @else if $value ==column-reverse {
     -webkit-box-direction: reverse;
     -webkit-box-orient: vertical;
-  } @else {
+  }
+
+  @else {
     -webkit-box-direction: normal;
     -webkit-box-orient: horizontal;
   }
+
   -webkit-flex-direction: $value;
   -moz-flex-direction: $value;
   -ms-flex-direction: $value;
@@ -38,9 +49,11 @@
 @mixin flex-center-vert {
   align-items: center;
 }
+
 @mixin flex-center-horiz {
   justify-content: center;
 }
+
 @mixin reset-list {
   margin: 0;
   padding: 0;
@@ -57,9 +70,11 @@ $media: (
 );
 
 @mixin mq($breakpoint) {
-  @each $breakpoints, $size in $media {
+
+  @each $breakpoints,
+  $size in $media {
     @if $breakpoint==$breakpoints {
-      @media screen and (min-width: $size) {
+      @media screen and (max-width: $size) {
         @content;
       }
     }

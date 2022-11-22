@@ -6,28 +6,31 @@
   @include flex-center;
   @include flex-direction(column);
   height: 100%;
+
   .homecontent {
     p {
       font-size: map-get($sizes, size-5);
     }
+
     button {
       width: 15em;
       height: map-get($sizes, size-8);
       font-size: map-get($sizes, size-5);
       transition: 0.4s;
       margin: 0 auto;
+
       i {
         font-size: map-get($sizes, size-4);
         transition: 0.4s;
       }
+
       &:hover i {
         transform: rotate(90deg);
       }
     }
-    // @include mediaquery("phone") {
-    //   button {
-    //     width: 10em;
-    //   }
-    // }
+
+    @include mq(sm) {
+      width: 10em;
+    }
   }
 }

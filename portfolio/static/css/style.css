@@ -167,6 +167,11 @@ body .titleblue {
 .home .homecontent button:hover i {
   transform: rotate(90deg);
 }
+@media screen and (max-width: 640px) {
+  .home .homecontent {
+    width: 10em;
+  }
+}
 
 label {
   position: fixed;
@@ -183,6 +188,11 @@ label .menu {
   border-radius: 50% 50% 50% 50%;
   transition: 0.5s ease-in-out;
   cursor: pointer;
+}
+@media screen and (max-width: 640px) {
+  label .menu {
+    right: 100px;
+  }
 }
 label .hamburger {
   position: absolute;
